@@ -4,7 +4,8 @@ That's the [docker image](https://hub.docker.com/repository/docker/goshkalp/html
 of htmlunit server based on [Selenium Server](http://selenium.dev/) version `3.141.59` and
 [HtmlUnit Driver](https://github.com/SeleniumHQ/htmlunit-driver) version `2.51.0`.
 
-#### Quick start
+## Quick start
+Using Docker CLI:
 ```
 docker run \
     -d \ 
@@ -12,7 +13,7 @@ docker run \
     htmlunit_selenium_server
 ```
 
-#### Next steps
+## Next steps
 After starting the server you can test you sites with selenium api
 using any programming language.  
 Python example:
@@ -25,7 +26,7 @@ capabilities = DesiredCapabilities.HTMLUNITWITHJS.copy()
 driver = Remote(command_executor='http://localhost:4444/wd/hub', desired_capabilities=capabilities)
 ```
 
-#### Simplification of work
+## Simplification of work
 You can use the ready-made [Python script](https://github.com/GoshkaLP/htmlunit_selenium_server/blob/master/WebDriverHandler.py) to make your tests. The script has presets for easier work when testing sites.  
 Example of script usage:
 ```
@@ -35,12 +36,12 @@ driver.start_driver()
 print(driver.get('https://api.my-ip.io/ip'))
 ```
 
-#### Related links
+## Related links
 - http://selenium.dev/
 - https://github.com/HtmlUnit/htmlunit
 - https://github.com/SeleniumHQ/htmlunit-driver
 - https://github.com/GoshkaLP/htmlunit_selenium_server
 - https://hub.docker.com/repository/docker/goshkalp/htmlunit_selenium_server
 
-#### License
+## License
 This image and script are distributed under Apache License 2.0.
